@@ -10,7 +10,7 @@ class Bank:
         jackpott = 10
         return f'jackpot: {self.__balance * jackpott}'
 
-    def united(self):
+    def __united(self):
         _united = self.__balance
         friendsbalance = 100
         return f'steal: {self.__balance + friendsbalance}'
@@ -20,14 +20,13 @@ class Bank:
         return f'null: {null}'
     def print(self):
         return f'{Bank.__kill(user)}\n' \
-               f'{Bank.__jackpot(user)}'
+               f'{Bank.__united(user)}'
     def __str__(self):
         return f'name: {self.__name} -- balance: {self.__balance}'
 
 user = Bank('Nailya', 100)
 print(user)
 print(Bank.moneyX(user))
-print(Bank.united(user))
 print(Bank.print(user))
 # print(dir(Bank))
 
@@ -51,10 +50,10 @@ class Calculator(object):
         return self.arg1 // self.arg2
 
     def __str__(self):
-        return f'{self.calculator} is ready to work!'
+        return f'{self.calculator} is working!'
 
 if __name__ == '__main__':
-    c = Calculator(12, 10, 'cal')
+    c = Calculator(12, 10, 'calculator')
     print(c.__str__())
     print(c.__add__(12, 10))
     print(c.__sub__(12, 10))
