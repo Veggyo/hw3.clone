@@ -10,17 +10,17 @@ class Bank:
         jackpott = 10
         return f'jackpot: {self.__balance * jackpott}'
 
-    def __united(self):
+    def _united(self):
         _united = self.__balance
         friendsbalance = 100
         return f'steal: {self.__balance + friendsbalance}'
 
-    def __kill(self):
+    def _kill(self):
         null = self.__balance - self.__balance
         return f'null: {null}'
     def print(self):
-        return f'{Bank.__kill(user)}\n' \
-               f'{Bank.__united(user)}'
+        return f'{Bank._kill(user)}\n' \
+               f'{Bank._united(user)}'
     def __str__(self):
         return f'name: {self.__name} -- balance: {self.__balance}'
 
